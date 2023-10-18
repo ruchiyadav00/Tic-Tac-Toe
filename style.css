@@ -1,0 +1,113 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:ital,wght@1,300&display=swap');
+
+ *{
+margin: 0;
+padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    background-color: brown;
+    color: white;
+    height: 65px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Poppins', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+/* background-color: rgb(255, 200, 0); */
+display: flex;
+justify-content: center;
+margin-top: 50px;
+}
+h1{
+    margin-bottom: 25px;
+}
+.container{
+ display: grid;
+ grid-template-rows: repeat(3, 10vw);
+ grid-template-columns: repeat(3, 10vw);
+ font-family: 'Poppins', sans-serif;
+ position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(255, 229, 217);
+}
+.gameInfo{
+  padding: 0 35px;
+  font-family: 'poppins';
+}
+.info{
+    font-size: 16px;
+  font-weight: 800px;
+
+}
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+/* utility classes */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 0 25px;
+    padding: 6px 15px;
+    background-color: rgb(206, 181, 230);
+    border-radius: 10px;
+    font-size: 16px;
+}
+.line{
+    width: 0vw;
+    transition: width 1s ease-in-out;
+    background-color: rgb(195, 31, 232);
+    height: 3px;
+    position: absolute;
+}
+
+@media screen and (max-width: 800px) {
+   .gameContainer{
+    flex-wrap: wrap;
+   }
+   .gameInfo{
+    text-align: center;
+   }
+   h1{
+    font-size: 25px;
+    border-bottom: solid 1px black;
+    margin: 10px 0 ;
+   }
+   #reset{
+    margin-top: 10px;
+   }
+   .container{
+    display: grid;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+    
+   }
+  }
